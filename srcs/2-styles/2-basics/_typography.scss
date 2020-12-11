@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Commissioner';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 88px;
+    font-weight: 800;
+}
+
+.h2 {
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 800;
+}
+
+.nav-links {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    @extend %transition-0-2s;
+}
+
+.nav-links:hover {
+    @extend %transition-0-2s;
+    font-weight: 700;
+}
+
+.button {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+}
+
+.button-one-learn-more {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.button.button-three {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 22,01px;
+}
+
+.white {
+    color: $white;
+}
+
+.black {
+    color: $black;
+}
+
+.red {
+    color: $red;
+}
+
+@media screen and (max-width: 1200px) {
+    p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    
+    h1 {
+        font-size: 56px;
+        line-height: 56px;
+    }
+
+    h1.keypoint-number {
+        font-size: 80px;
+        line-height: 88px;
+    }
+
+    .h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    h3 {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .nav-links {
+        font-size: 15px;
+    }
+
+    .button.button-three {
+        font-size: 15px;
+        line-height: 18,35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    
+
+    .nav-links {
+        font-size: 18px;
+    }
+}

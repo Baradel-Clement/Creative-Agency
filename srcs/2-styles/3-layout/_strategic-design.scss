@@ -1,0 +1,116 @@
+.strategic-design {
+    width: 100%;
+    height: 984px;
+    @include flex(flex, row, flex-start, flex-start);
+    position: relative;
+    z-index: 1;
+}
+
+.strategic-design-img {
+    flex: 49%;
+    height: 984px;
+    background-image: url(/assets/desktop/image-strategic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.strategic-design-desc {
+    flex: 51%;
+    height: 784px;
+    background-color: $bg-black;
+    @include flex(flex, row, center, flex-start);
+    position: relative;
+}
+
+.strategic-design-desc-wrap {
+    width: 445px;
+    height: 394px;
+    @include flex(flex, column, space-between, flex-start);
+    margin-top: 200px;
+    position: relative;
+}
+
+#strategic-wave-red-desktop {
+    @include absolute-el(225px, unset, unset, -67px);
+    z-index: 2;
+}
+
+#strategic-wave-red-tablet, #strategic-wave-red-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .strategic-design {
+        height: 658px;
+    }
+    
+    .strategic-design-img {
+        height: 658px;
+        background-image: url(/assets/tablet/image-strategic.jpg);
+    }
+    
+    .strategic-design-desc {
+        height: 538px;
+    }
+    
+    .strategic-design-desc-wrap {
+        width: 281px;
+        height: 298px;
+        margin-top: 120px;
+    }
+
+    .strategic-design-desc-wrap > p:first-child {
+        width: 152px;
+    }
+    
+    #strategic-wave-red-desktop {
+        display: none;
+    }
+
+    #strategic-wave-red-tablet {
+        display: block;
+        @include absolute-el(147px, unset, unset, -31px);
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .strategic-design {
+        width: 100%;
+        height: 577px;
+        @include flex(flex, column, flex-start, center);
+    }
+    
+    .strategic-design-img {
+        flex: 34.6%;
+        width: 100%;
+        background-image: url(/assets/mobile/image-strategic.jpg);
+        background-position: center;
+    }
+    
+    .strategic-design-desc {
+        flex: 65.4%;
+        width: 100%;
+    }
+    
+    .strategic-design-desc-wrap {
+        width: 327px;
+        height: 233px;
+        margin-top: 72px;
+    }
+
+    .strategic-design-desc-wrap > p:first-child {
+        width: auto;
+    }
+    
+    #strategic-wave-red-tablet {
+        display: none;
+    }
+
+    #strategic-wave-red-mobile {
+        display: block;
+        @include absolute-el(-87px, unset, unset, 0px);
+        z-index: 2;
+    }
+}

@@ -1,0 +1,111 @@
+.keypoints-container {
+    width: 100%;
+    height: 900px;
+    background-color: white;
+    @include flex(flex row, flex-end, flex-end);
+    position: relative;
+    z-index: 1;
+}
+
+.keypoints-block {
+    width: 62.1%;
+    height: 1100px;
+    @include absolute-el(unset, 0px, 0px, unset);
+    z-index: 2;
+    background-color: $red;
+    @include flex(flex, row, center, flex-start);
+}
+
+.keypoints-block > p {
+    @include absolute-el(392px, unset, unset, -380px);
+    width: 540px;
+    height: 192Px;
+}
+
+.keypoints-wrap {
+    width: 504px;
+    height: 700px;
+    @include flex(flex, column, space-between, center);
+    position: relative;
+    margin-top: 200px;
+}
+
+.keypoint {
+    width: 504px;
+    height: 196px;
+    padding: 44px 0px 0px 59px;
+    @include flex(flex, column, space-between, flex-start);
+    position: relative;
+    z-index: 3;
+}
+
+.keypoint > h1 {
+    opacity: 0.25;
+    @include absolute-el(0px, unset, unset, 0px);
+    z-index: 2;
+}
+
+@media screen and (max-width: 1200px) {
+    .keypoints-container {
+        height: 677px;
+    }
+    
+    .keypoints-block {
+        width: 57%;
+        height: 797px;
+    }
+    
+    .keypoints-block > p {
+        @include absolute-el(246px, unset, unset, -300px);
+        width: 281px;
+        height: 120px;
+    }
+    
+    .keypoints-wrap {
+        width: 355px;
+        height: 557px;
+        margin-top: 120px;
+    }
+    
+    .keypoint {
+        width: 355px;
+        height: 159px;
+        padding: 44px 0px 0px 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .keypoints-container {
+        height: 918px;
+    }
+    
+    .keypoints-block {
+        width: 100%;
+        height: 918px;
+        position: relative;
+        padding: 96px 24px;
+        @include flex(flex, column, space-between, center);
+    }
+    
+    .keypoints-block > p {
+        position: relative;
+        top: unset;
+        left: unset;
+
+        width: 327px;
+        height: 120px;
+        color: white !important;
+    }
+    
+    .keypoints-wrap {
+        width: 327px;
+        height: 557px;
+        margin-top: 0px;
+    }
+    
+    .keypoint {
+        width: 327px;
+        height: 159px;
+        padding: 44px 0px 0px 16px;
+    }
+}
